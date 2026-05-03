@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Clean Kitchen Program · Restore Your Gut Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary-container": "#e0e3de",
+          "secondary-fixed": "#f2f5f0",
+          "primary-container": "#ffffff",
+          "on-surface-variant": "#2d3a30",
+          "on-secondary": "#ffffff",
+          "secondary": "#2d3a30",
+          "primary-fixed": "#e5e2e1",
+          "surface-container-highest": "#fcf9f8",
+          "secondary-container": "#ffffff",
+          "primary": "#2d3a30",
+          "on-secondary-container": "#2d3a30",
+          "on-tertiary": "#ffffff",
+          "on-error-container": "#93000a",
+          "background": "#f2f5f0",
+          "inverse-surface": "#313030",
+          "primary-fixed-dim": "#c8c6c5",
+          "tertiary-fixed-dim": "#c4c7c3",
+          "error": "#ba1a1a",
+          "secondary-fixed-dim": "#ffb4a8",
+          "outline-variant": "#d1d5db",
+          "outline": "#747878",
+          "tertiary": "#2d3a30",
+          "surface-container-high": "#ebe7e7",
+          "surface-container-low": "#f6f3f2",
+          "surface-tint": "#5f5e5e",
+          "on-primary-fixed-variant": "#474646",
+          "on-error": "#ffffff",
+          "on-secondary-fixed-variant": "#2d3a30",
+          "surface-variant": "#ffffff",
+          "on-surface": "#2d3a30",
+          "on-primary-fixed": "#1c1b1b",
+          "surface-bright": "#fcf9f8",
+          "on-primary-container": "#2d3a30",
+          "inverse-primary": "#c8c6c5",
+          "tertiary-fixed": "#e0e3de",
+          "surface-container": "#f0edec",
+          "on-background": "#2d3a30",
+          "on-secondary-fixed": "#2d3a30",
+          "on-primary": "#ffffff",
+          "inverse-on-surface": "#f3f0ef",
+          "surface-dim": "#dcd9d9",
+          "on-tertiary-fixed-variant": "#2d3a30",
+          "surface-container-lowest": "#ffffff",
+          "surface": "#fcf9f8",
+          "on-tertiary-fixed": "#191c1a",
+          "on-tertiary-container": "#2d3a30",
+          "error-container": "#ffdad6"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.5rem",
+          "lg": "0.75rem",
+          "xl": "1rem",
+          "full": "9999px"
+        },
+        "fontFamily": {
+          "headline-md": ["Newsreader"],
+          "body-md": ["Manrope"],
+          "body-lg": ["Manrope"],
+          "headline-lg": ["Newsreader"],
+          "display": ["Newsreader"],
+          "label-caps": ["Manrope"],
+          "inter": ["Inter", "sans-serif"],
+          "newsreader": ["Newsreader", "Georgia", "serif"]
+        },
+        "fontSize": {
+          "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+          "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.08em", "fontWeight": "600"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(45, 58, 48, 0.1);
+  }
+  .biophilic-bg {
+    background: radial-gradient(circle at top left, #f2f5f0 0%, #e8ede5 100%);
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* ── Shiny button (ported from 21st.dev magicui) ── */
+  @property --shx {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 100%;
+  }
+  @keyframes shinySlide {
+    0%, 20%   { --shx: 100%; }
+    70%, 100% { --shx: -100%; }
+  }
+  .shiny-btn {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-image: linear-gradient(
+      -75deg,
+      #2d3a30 0%,
+      #2d3a30 calc(var(--shx) + 5%),
+      rgba(255,255,255,0.22) calc(var(--shx) + 18%),
+      rgba(255,255,255,0.32) calc(var(--shx) + 23%),
+      rgba(255,255,255,0.22) calc(var(--shx) + 28%),
+      #2d3a30 calc(var(--shx) + 40%),
+      #2d3a30 100%
+    );
+    box-shadow: 0 4px 16px rgba(45,58,48,0.28);
+    transition: box-shadow 0.3s ease, transform 0.15s ease;
+    animation: shinySlide 3s ease-in-out infinite;
+  }
+  .shiny-btn:hover {
+    box-shadow: 0 8px 32px rgba(45,58,48,0.42);
+  }
+  .shiny-btn:active {
+    transform: scale(0.96);
+  }
+
+  /* ── Floating background shapes (ported from 21st.dev) ── */
+  .bg-shapes {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .bg-shape {
+    position: absolute;
+    border-radius: 9999px;
+    border: 1.5px solid rgba(45, 58, 48, 0.09);
+    box-shadow: 0 8px 32px 0 rgba(45, 58, 48, 0.04);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+  @keyframes bgShapeEnter {
+    from { opacity: 0; transform: translateY(-120px) rotate(calc(var(--rot) - 15deg)); }
+    to   { opacity: 1; transform: translateY(0)      rotate(var(--rot)); }
+  }
+  @keyframes bgShapeFloat {
+    0%,100% { transform: translateY(0px)  rotate(var(--rot)); }
+    50%     { transform: translateY(15px) rotate(var(--rot)); }
+  }
+
+  .bg-shape-1 {
+    --rot: 12deg;
+    width: 600px; height: 140px;
+    left: -5%; top: 18%;
+    background: linear-gradient(to right, rgba(45,58,48,0.07), transparent);
+    animation: bgShapeEnter 2.4s 0.3s both, bgShapeFloat 12s 2.7s ease-in-out infinite;
+  }
+  .bg-shape-2 {
+    --rot: -15deg;
+    width: 520px; height: 120px;
+    right: -2%; top: 68%;
+    background: linear-gradient(to right, rgba(45,58,48,0.06), transparent);
+    animation: bgShapeEnter 2.4s 0.5s both, bgShapeFloat 14s 2.9s ease-in-out infinite;
+  }
+  .bg-shape-3 {
+    --rot: -8deg;
+    width: 320px; height: 80px;
+    left: 8%; bottom: 8%;
+    background: linear-gradient(to right, rgba(80,105,85,0.08), transparent);
+    animation: bgShapeEnter 2.4s 0.4s both, bgShapeFloat 11s 2.8s ease-in-out infinite;
+  }
+  .bg-shape-4 {
+    --rot: 20deg;
+    width: 220px; height: 60px;
+    right: 18%; top: 12%;
+    background: linear-gradient(to right, rgba(45,58,48,0.06), transparent);
+    animation: bgShapeEnter 2.4s 0.6s both, bgShapeFloat 13s 3.0s ease-in-out infinite;
+  }
+  .bg-shape-5 {
+    --rot: -25deg;
+    width: 160px; height: 42px;
+    left: 24%; top: 7%;
+    background: linear-gradient(to right, rgba(80,105,85,0.07), transparent);
+    animation: bgShapeEnter 2.4s 0.7s both, bgShapeFloat 10s 3.1s ease-in-out infinite;
+  }
+  .bg-shape-6 {
+    --rot: 8deg;
+    width: 400px; height: 90px;
+    left: 30%; top: 45%;
+    background: linear-gradient(to right, rgba(45,58,48,0.04), transparent);
+    animation: bgShapeEnter 2.4s 0.45s both, bgShapeFloat 15s 2.85s ease-in-out infinite;
+  }
+</style>
+</head>
+<body class="biophilic-bg text-on-surface font-body-md selection:bg-tertiary-fixed">
+
+<!-- Background floating shapes -->
+<div class="bg-shapes" aria-hidden="true">
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="bg-shape bg-shape-3"></div>
+  <div class="bg-shape bg-shape-4"></div>
+  <div class="bg-shape bg-shape-5"></div>
+  <div class="bg-shape bg-shape-6"></div>
+</div>
+
+<!-- Nav -->
+<nav class="sticky top-0 w-full z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/50 shadow-sm">
+  <div class="flex justify-between items-center px-6 md:px-12 h-20 max-w-7xl mx-auto">
+    <span class="font-newsreader font-bold text-xl md:text-2xl text-primary">The Clean Kitchen Program</span>
+    <div class="hidden md:flex gap-8 items-center"></div>
+    <a class="shiny-btn text-on-primary px-6 py-2.5 rounded-lg font-label-caps uppercase tracking-widest" href="#pricing">Join Now</a>
+  </div>
+</nav>
+
+<main class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+
+  <!-- Hero -->
+  <section class="py-16 md:py-24 lg:py-32 flex flex-col items-center text-center">
+    <span class="inline-flex flex-wrap justify-center items-center gap-x-2.5 gap-y-1 bg-white/70 backdrop-blur-sm border border-primary/30 text-primary font-label-caps uppercase tracking-[0.12em] md:tracking-[0.15em] text-[10px] md:text-xs px-4 py-2 md:px-5 md:py-2.5 rounded-2xl md:rounded-full mb-8 shadow-sm max-w-xs md:max-w-none text-center" style="box-shadow: 0 0 0 3px rgba(45,58,48,0.06), 0 2px 8px rgba(45,58,48,0.1);">
+      <span class="relative flex h-2 w-2 flex-shrink-0">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60"></span>
+        <span class="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+      </span>
+      For people looking to improve their health through food
+    </span>
+    <h1 class="font-display text-4xl md:text-display text-primary max-w-4xl mb-8 font-bold leading-tight">
+      Finally eat clean without the confusion.
+    </h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+      Get the exact system Kyle follows to eat clean, live healthy, and reduce bloating and inflammation.
+    </p>
+    <div class="flex flex-col items-center gap-4">
+      <a class="shiny-btn text-on-primary px-6 py-4 md:px-10 md:py-5 rounded-lg text-sm md:text-lg font-label-caps uppercase tracking-widest" href="#pricing">
+        Start the 4-Week Reset
+      </a>
+      <p class="text-xs opacity-60 font-body-md">Limited spots available</p>
+    </div>
+  </section>
+
+  <!-- Product Preview -->
+  <section class="mb-16 md:mb-32 relative">
+    <div class="glass-card rounded-2xl overflow-hidden aspect-[16/9] shadow-2xl flex items-center justify-center p-8">
+      <img alt="The Clean Eating Playbook Mockup" class="w-full h-full object-cover rounded-xl"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNtQis6s-6vEV0PeCNWOn0ks2VR6eEGDZLRMearRejiXgs8dY2fY_6zofF5cZMpSBJHedfWXoF4ecLLdRFnxlSrlAkFs9TEzHXWSfzamcTru5UANlHWIcdwWdKiFupoBsg79Op7oUvauN03WvAWWlcfwmxSrY1kTMLug-rCF77Jrm_ytvmLwbgdxZ3tnRl5eqU5ggHqDe9lpKdj06kRxmeluRKRxexPGPH9amilmHkWIYWCjGJW_oZ3HRUOctL-VxvwPty654yAg"/>
+    </div>
+  </section>
+
+  <!-- CTA Sprint -->
+  <div class="flex justify-center mb-16 md:mb-32">
+    <a class="shiny-btn text-on-primary px-6 py-4 md:px-10 md:py-5 rounded-lg text-sm md:text-lg font-label-caps uppercase tracking-widest" href="#pricing">Enroll Now</a>
+  </div>
+
+  <!-- What's Included -->
+  <section class="mb-16 md:mb-32" id="program">
+    <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary text-center mb-16 font-bold">What is included</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-primary">video_camera_front</span>
+        <div>
+          <h4 class="font-body-md font-bold text-primary mb-2">Live Weekly Sessions</h4>
+          <p class="font-body-md text-sm opacity-80">Bring your specific questions, your products, your pantry. Kyle answers live, not through a canned FAQ.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-primary">library_books</span>
+        <div>
+          <h4 class="font-body-md font-bold text-primary mb-2">Resource Bank</h4>
+          <p class="font-body-md text-sm opacity-80">Store-specific buying guides covering Costco, Whole Foods, Trader Joe's, Walmart, Target, and more. Know exactly what to buy and what to skip wherever you shop.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-primary">shopping_basket</span>
+        <div>
+          <h4 class="font-body-md font-bold text-primary mb-2">Product Recommendations</h4>
+          <p class="font-body-md text-sm opacity-80">Kyle's personal vetted list of the supplements, foods, and brands he trusts. Updated when he finds something better.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-primary">sell</span>
+        <div>
+          <h4 class="font-body-md font-bold text-primary mb-2">Discount Codes</h4>
+          <p class="font-body-md text-sm opacity-80">Hundreds of member-exclusive codes across supplements, health brands, and pantry staples. The program often pays for itself through savings alone.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-primary">assignment</span>
+        <div>
+          <h4 class="font-body-md font-bold text-primary mb-2">Toolkits &amp; Assessments</h4>
+          <p class="font-body-md text-sm opacity-80">A daily protocol tracker, a pantry audit guide, and a symptom log that helps you see your own patterns across the 4 weeks.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-primary">groups</span>
+        <div>
+          <h4 class="font-body-md font-bold text-primary mb-2">Private Community</h4>
+          <p class="font-body-md text-sm opacity-80">A group of people doing the same work at the same time. Members share progress, hold each other accountable, and ask the questions they wouldn't bring to a doctor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Only Program Positioning -->
+  <section class="mb-16 md:mb-32 bg-primary text-on-primary rounded-3xl px-8 md:px-16 py-16 md:py-24 text-center">
+    <span class="inline-block font-label-caps uppercase tracking-widest text-on-primary/50 text-xs mb-6">Why this is different</span>
+    <h2 class="font-headline-lg text-3xl md:text-headline-lg font-bold mb-6 max-w-3xl mx-auto">The only program that covers what to avoid, what to eat, and how to live. Taught live. With direct access to Kyle for every question.</h2>
+    <p class="font-body-lg text-on-primary/70 max-w-2xl mx-auto">Every other resource gives you one piece. A book covers food. A podcast covers supplements. A nutritionist gives you a list. This program covers all three pillars in a single live curriculum, and you can ask about your specific pantry, your specific symptoms, and your specific life.</p>
+  </section>
+
+  <!-- Curriculum -->
+  <section class="mb-16 md:mb-32 max-w-4xl mx-auto px-6 md:px-0">
+    <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary text-center mb-4 font-bold">What We Cover</h2>
+    <p class="text-center text-on-surface-variant opacity-70 font-body-md mb-12 md:mb-16">8 live sessions. Every one built to move you forward.</p>
+    <div class="bg-white/70 backdrop-blur-md rounded-3xl px-8 md:px-12 py-10 md:py-14 border border-primary/8 shadow-sm">
+    <div class="relative border-l-2 border-primary/20 ml-4 md:ml-8 space-y-14 md:space-y-16">
+
+      <div class="relative pl-8 md:pl-12">
+        <div class="absolute -left-[11px] top-1 w-5 h-5 bg-tertiary-container border-2 border-primary rounded-full"></div>
+        <span class="text-xs font-label-caps text-primary/70 block mb-1 uppercase tracking-widest">Session 1</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-primary mb-2 font-bold">Why Your Gut Is Where It Is</h3>
+        <p class="font-body-md text-on-surface-variant opacity-80">The full picture of what's actually happening inside your body. Why so many foods marketed as healthy are often the first offenders, and the gut physiology that explains why nothing you've tried has stuck.</p>
+      </div>
+
+      <div class="relative pl-8 md:pl-12">
+        <div class="absolute -left-[11px] top-1 w-5 h-5 bg-tertiary-container border-2 border-primary rounded-full"></div>
+        <span class="text-xs font-label-caps text-primary/70 block mb-1 uppercase tracking-widest">Session 2</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-primary mb-2 font-bold">How to Read What's Actually in Your Food</h3>
+        <p class="font-body-md text-on-surface-variant opacity-80">The live label-reading session. Kyle walks through the exact ingredient categories that erode your gut lining, using products members submit before the call. You will not shop the same way after this.</p>
+      </div>
+
+      <div class="relative pl-8 md:pl-12">
+        <div class="absolute -left-[11px] top-1 w-5 h-5 bg-tertiary-container border-2 border-primary rounded-full"></div>
+        <span class="text-xs font-label-caps text-primary/70 block mb-1 uppercase tracking-widest">Session 3</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-primary mb-2 font-bold">The Gut Destroyers That Never Appear on a Label</h3>
+        <p class="font-body-md text-on-surface-variant opacity-80">Medications, household products, water quality, and daily routines that silently damage your gut. The session most members say changed everything, because none of this will ever show up on a nutrition label.</p>
+      </div>
+
+      <div class="relative pl-8 md:pl-12">
+        <div class="absolute -left-[11px] top-1 w-5 h-5 bg-tertiary-container border-2 border-primary rounded-full"></div>
+        <span class="text-xs font-label-caps text-primary/70 block mb-1 uppercase tracking-widest">Session 4</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-primary mb-2 font-bold">The Foods That Nourish, and How to Actually Eat Them</h3>
+        <p class="font-body-md text-on-surface-variant opacity-80">This isn't a restriction protocol. Kyle walks you through the foods that actively support your gut lining, what order to introduce them, and why abundance, rather than elimination, is the lasting strategy for change.</p>
+      </div>
+
+      <div class="relative pl-8 md:pl-12">
+        <div class="absolute -left-[11px] top-1 w-5 h-5 bg-tertiary-container border-2 border-primary rounded-full"></div>
+        <span class="text-xs font-label-caps text-primary/70 block mb-1 uppercase tracking-widest">Session 5</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-primary mb-2 font-bold">Supplements: What Works, What's Situational, What to Skip</h3>
+        <p class="font-body-md text-on-surface-variant opacity-80">A no-nonsense breakdown of the gut supplement landscape. What's foundational for everyone, what's targeted for specific issues, and what's a waste of money. You leave with a clear tiered framework, not a shopping list you don't understand.</p>
+      </div>
+
+      <div class="relative pl-8 md:pl-12">
+        <div class="absolute -left-[11px] top-1 w-5 h-5 bg-tertiary-container border-2 border-primary rounded-full"></div>
+        <span class="text-xs font-label-caps text-primary/70 block mb-1 uppercase tracking-widest">Session 6</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-primary mb-2 font-bold">Building a Life Your Gut Can Thrive In</h3>
+        <p class="font-body-md text-on-surface-variant opacity-80">Meal timing, plate construction, how to eat out and travel without losing your progress, plus movement and the full non-toxic home audit covering cookware, water, food storage, and personal care. Everything that lives outside the plate.</p>
+      </div>
+
+      <div class="relative pl-8 md:pl-12">
+        <div class="absolute -left-[11px] top-1 w-5 h-5 bg-tertiary-container border-2 border-primary rounded-full"></div>
+        <span class="text-xs font-label-caps text-primary/70 block mb-1 uppercase tracking-widest">Session 7</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-primary mb-2 font-bold">The Lever Most People Completely Ignore</h3>
+        <p class="font-body-md text-on-surface-variant opacity-80">Stress, sleep, and the gut-brain axis. How cortisol, chronic under-recovery, and nervous system dysregulation wreck your microbiome, and the practical tools to reverse it. More impactful than most people expect.</p>
+      </div>
+
+      <div class="relative pl-8 md:pl-12">
+        <div class="absolute -left-[11px] top-1 w-5 h-5 bg-tertiary-container border-2 border-primary rounded-full"></div>
+        <span class="text-xs font-label-caps text-primary/70 block mb-1 uppercase tracking-widest">Session 8 · Capstone</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-primary mb-2 font-bold">Your Personal Gut Protocol, Built Live</h3>
+        <p class="font-body-md text-on-surface-variant opacity-80">The session you've been building toward. Kyle helps every member finalize their own one-page gut protocol on the call, a printed document you walk away with. Your specific plan, your commitments, your roadmap for what comes next.</p>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- CTA after curriculum -->
+  <div class="flex justify-center my-16 md:my-32">
+    <a class="shiny-btn text-on-primary px-6 py-4 md:px-10 md:py-5 rounded-lg text-sm md:text-lg font-label-caps uppercase tracking-widest" href="#pricing">Secure My Spot</a>
+  </div>
+
+  <!-- That's Not All -->
+  <section class="py-16 md:py-24 mb-16 md:mb-32 bg-tertiary-container/30 rounded-3xl">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary text-center mb-12 md:mb-20 font-bold">Free Bonuses Inside</h2>
+      <div class="space-y-12 md:space-y-20">
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24 fade-in-item" data-delay="0">
+          <div class="w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-md ring-2 ring-primary/15 ring-offset-2">
+            <img alt="Resource Bank" class="w-full h-full object-cover object-top" src="/resource-bank.png"/>
+          </div>
+          <div class="w-full md:w-1/2">
+            <h3 class="font-headline-md text-2xl md:text-headline-md text-primary mb-6 font-bold">Resource Bank</h3>
+            <p class="font-body-lg text-body-lg text-on-surface-variant opacity-90 leading-relaxed">Access all of my product recommendations and cheatsheets across different food categories and stores. Never guess what to buy again.</p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 lg:gap-24 fade-in-item" data-delay="150">
+          <div class="w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-md ring-2 ring-primary/15 ring-offset-2">
+            <img alt="Personalized Audits" class="w-full h-full object-cover object-top" src="/quiz-assessment.png"/>
+          </div>
+          <div class="w-full md:w-1/2">
+            <h3 class="font-headline-md text-2xl md:text-headline-md text-primary mb-6 font-bold">Personalized Audits &amp; Assessments</h3>
+            <p class="font-body-lg text-body-lg text-on-surface-variant opacity-90 leading-relaxed">Audit your pantry to understand what to remove and what to buy. We'll work together to establish a baseline that works for your unique environment.</p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24 fade-in-item" data-delay="300">
+          <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-md ring-2 ring-primary/15 ring-offset-2" style="background:#7d9982;">
+            <img alt="Member Discount Codes" class="w-full h-auto object-contain" src="/discount-codes.png"/>
+          </div>
+          <div class="w-full md:w-1/2">
+            <h3 class="font-headline-md text-2xl md:text-headline-md text-primary mb-6 font-bold">Exclusive Discounts</h3>
+            <p class="font-body-lg text-body-lg text-on-surface-variant opacity-90 leading-relaxed">Access hundreds of discount codes for all of my favorite products, exclusive to program members. Save money while upgrading your nutrition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before / After -->
+  <section class="mb-16 md:mb-32">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <!-- Before -->
+      <div class="bg-stone-900 text-stone-100 p-8 md:p-12 rounded-3xl">
+        <span class="inline-block text-xs font-label-caps uppercase tracking-widest text-stone-400 mb-6 border border-stone-700 px-3 py-1 rounded-full">Where you are now</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-white mb-8 font-bold">The Cycle You're Stuck In</h3>
+        <ul class="space-y-5">
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-400 mt-0.5 text-base flex-shrink-0">close</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Bloated after almost every meal</p>
+              <p class="text-stone-400 text-sm">Doesn't matter what you eat. The discomfort shows up anyway.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-400 mt-0.5 text-base flex-shrink-0">close</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Energy crashes every afternoon</p>
+              <p class="text-stone-400 text-sm">You're dependent on caffeine just to get through the day.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-400 mt-0.5 text-base flex-shrink-0">close</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Brain fog you can't shake</p>
+              <p class="text-stone-400 text-sm">Slow, scattered thinking that makes it hard to feel sharp or present.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-400 mt-0.5 text-base flex-shrink-0">close</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Food anxiety at every meal</p>
+              <p class="text-stone-400 text-sm">Eating out feels stressful. You're never sure what's safe.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-400 mt-0.5 text-base flex-shrink-0">close</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Googling symptoms at midnight</p>
+              <p class="text-stone-400 text-sm">Different answer every time. No clear path forward.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-400 mt-0.5 text-base flex-shrink-0">close</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Waking up tired even after 8 hours</p>
+              <p class="text-stone-400 text-sm">Sleep doesn't restore you. You start the day already behind.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- After -->
+      <div class="bg-[#2d3a30] text-stone-100 p-8 md:p-12 rounded-3xl">
+        <span class="inline-block text-xs font-label-caps uppercase tracking-widest text-emerald-300 mb-6 border border-emerald-800 px-3 py-1 rounded-full">After the reset</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-white mb-8 font-bold">The Life on the Other Side</h3>
+        <ul class="space-y-5">
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 text-base flex-shrink-0">check</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Digestion that just works</p>
+              <p class="text-stone-400 text-sm">Light, comfortable, predictable. Meals stop being a source of stress.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 text-base flex-shrink-0">check</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Steady energy from morning to evening</p>
+              <p class="text-stone-400 text-sm">Steady, sustained vitality. The crash stops being part of your day.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 text-base flex-shrink-0">check</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Mental clarity that feels effortless</p>
+              <p class="text-stone-400 text-sm">Sharp, focused, present. The fog doesn't come back.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 text-base flex-shrink-0">check</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Confidence at every meal</p>
+              <p class="text-stone-400 text-sm">You know what to order, what to avoid, and why. Eating out is easy.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 text-base flex-shrink-0">check</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">A framework you own for life</p>
+              <p class="text-stone-400 text-sm">No more guessing. You understand your body and how to support it.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 text-base flex-shrink-0">check</span>
+            <div>
+              <p class="font-bold text-stone-200 text-sm mb-0.5">Sleep that actually restores you</p>
+              <p class="text-stone-400 text-sm">You wake up rested and ready. The gut-sleep connection is one of the most underestimated things in this program.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="mb-16 md:mb-32" id="reviews">
+    <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary text-center mb-4 font-bold">What Members Have Experienced</h2>
+    <p class="text-center text-on-surface-variant opacity-60 font-body-md mb-10">From people who followed the program and saw it through.</p>
+    <div class="flex flex-wrap justify-center gap-3 mb-12">
+      <span class="glass-card px-5 py-3 rounded-full text-sm font-body-md text-primary flex items-center gap-2 shadow-sm"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span> Never bloated</span>
+      <span class="glass-card px-5 py-3 rounded-full text-sm font-body-md text-primary flex items-center gap-2 shadow-sm"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span> More energy</span>
+      <span class="glass-card px-5 py-3 rounded-full text-sm font-body-md text-primary flex items-center gap-2 shadow-sm"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span> Less discomfort</span>
+      <span class="glass-card px-5 py-3 rounded-full text-sm font-body-md text-primary flex items-center gap-2 shadow-sm"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span> Faster grocery shopping</span>
+      <span class="glass-card px-5 py-3 rounded-full text-sm font-body-md text-primary flex items-center gap-2 shadow-sm"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span> Zero confusion on what to buy</span>
+    </div>
+    <div class="testimonials-track overflow-hidden">
+      <div class="testimonials-inner flex gap-6" id="testimonialScroll">
+        <div class="glass-card p-8 rounded-2xl flex-shrink-0 w-80 shadow-md">
+          <div class="flex gap-1 mb-4">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+          </div>
+          <p class="font-body-md mb-6 leading-relaxed">"I haven't felt this light in years. The brain fog lifted within the second week and my bloating is basically gone. I didn't think food alone could do this."</p>
+          <span class="font-label-caps opacity-60 text-xs">— SARAH M., TEACHER</span>
+        </div>
+        <div class="glass-card p-8 rounded-2xl flex-shrink-0 w-80 shadow-md">
+          <div class="flex gap-1 mb-4">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+          </div>
+          <p class="font-body-md mb-6 leading-relaxed">"Kyle's story is what made me trust this. He's not selling a theory. He lived it. The program is thorough, practical, and it actually works."</p>
+          <span class="font-label-caps opacity-60 text-xs">— MARCUS T., ENTREPRENEUR</span>
+        </div>
+        <div class="glass-card p-8 rounded-2xl flex-shrink-0 w-80 shadow-md">
+          <div class="flex gap-1 mb-4">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+          </div>
+          <p class="font-body-md mb-6 leading-relaxed">"I've done elimination diets, seen gastroenterologists, tried every probiotic on Amazon. This was the first thing that gave me a framework I could actually sustain."</p>
+          <span class="font-label-caps opacity-60 text-xs">— ELENA R., DESIGNER</span>
+        </div>
+        <div class="glass-card p-8 rounded-2xl flex-shrink-0 w-80 shadow-md">
+          <div class="flex gap-1 mb-4">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+          </div>
+          <p class="font-body-md mb-6 leading-relaxed">"The label-reading session alone was worth the entire price. I walked through my pantry the next morning and threw out half of it. Eye-opening doesn't cover it."</p>
+          <span class="font-label-caps opacity-60 text-xs">— JAMES K., PROJECT MANAGER</span>
+        </div>
+        <div class="glass-card p-8 rounded-2xl flex-shrink-0 w-80 shadow-md">
+          <div class="flex gap-1 mb-4">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+          </div>
+          <p class="font-body-md mb-6 leading-relaxed">"I was skeptical. I've heard 'heal your gut' a hundred times. But Kyle explains the actual physiology. By week two my energy was different. By week four I felt like myself again."</p>
+          <span class="font-label-caps opacity-60 text-xs">— PRIYA S., NURSE</span>
+        </div>
+        <div class="glass-card p-8 rounded-2xl flex-shrink-0 w-80 shadow-md">
+          <div class="flex gap-1 mb-4">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; color:#f59e0b;">star</span>
+          </div>
+          <p class="font-body-md mb-6 leading-relaxed">"My husband joined with me and we completely overhauled how we eat as a family. Our kids are eating better, I'm sleeping better, and I've lost 11 pounds without trying."</p>
+          <span class="font-label-caps opacity-60 text-xs">— AMANDA L., STAY-AT-HOME MOM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who it's for / not for -->
+  <section class="mb-16 md:mb-32">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <div class="bg-[#2d3a30] p-8 md:p-12 rounded-3xl">
+        <span class="inline-block text-xs font-label-caps uppercase tracking-widest text-emerald-300 mb-6 border border-emerald-800 px-3 py-1 rounded-full">This is for you</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-white mb-8 font-bold">You're in the right place if...</h3>
+        <ul class="space-y-5">
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            <p class="text-stone-200 text-sm leading-relaxed">You're tired of guessing and want a clear, evidence-based system you can actually follow.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            <p class="text-stone-200 text-sm leading-relaxed">You've tried cutting things out but nothing has stuck, and you're ready to understand why.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            <p class="text-stone-200 text-sm leading-relaxed">You want to understand the 'why', not just a list of foods to eat and avoid.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            <p class="text-stone-200 text-sm leading-relaxed">You're ready to commit 4 weeks to actually fixing this, not managing it forever.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">check_circle</span>
+            <p class="text-stone-200 text-sm leading-relaxed">You don't have a formal diagnosis but you know something is off, including bloating, low energy, or constant discomfort.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="bg-stone-100 p-8 md:p-12 rounded-3xl border border-stone-200">
+        <span class="inline-block text-xs font-label-caps uppercase tracking-widest text-stone-500 mb-6 border border-stone-300 px-3 py-1 rounded-full">This isn't for you</span>
+        <h3 class="font-headline-md text-xl md:text-headline-md text-stone-800 mb-8 font-bold">Skip this if...</h3>
+        <ul class="space-y-5">
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <p class="text-stone-500 text-sm leading-relaxed">You're looking for a 3-day cleanse or a magic supplement that fixes everything overnight.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <p class="text-stone-500 text-sm leading-relaxed">You're not willing to look at what you're eating and make meaningful changes, even small ones.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <p class="text-stone-500 text-sm leading-relaxed">You want a passive experience. This program requires showing up and doing the work.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <p class="text-stone-500 text-sm leading-relaxed">You prefer a rigid meal plan handed to you, instead of understanding your body and building your own system.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <p class="text-stone-500 text-sm leading-relaxed">You need urgent medical care. This program is educational and supportive, not a substitute for clinical treatment.</p>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <p class="text-stone-500 text-sm leading-relaxed">You expect visible results by week two and are ready to stop if nothing has shifted yet. This is a 4-week system designed for people willing to see it through.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Kyle -->
+  <section class="mb-16 md:mb-32 flex flex-col md:flex-row items-center gap-8 md:gap-16">
+    <div class="w-full md:w-1/2 aspect-[4/3] md:aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+      <img alt="Kyle, Creator of The Clean Kitchen Program" class="w-full h-full object-cover"
+        src="/kyle.jpg"/>
+    </div>
+    <div class="w-full md:w-1/2">
+      <span class="text-xs font-label-caps text-primary block mb-4 uppercase tracking-widest">Kyle's Story</span>
+      <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary mb-8 font-bold">Meet Kyle</h2>
+      <div class="space-y-8 text-on-surface-variant font-body-lg">
+        <p>At 23, I was diagnosed with Crohn's disease. I tried the medications. I went through the procedures. Nothing the conventional system offered made a lasting difference.</p>
+        <p>I started studying nutrition on my own. Obsessively. I changed how I shopped at Costco, Whole Foods, and every other store I used. I changed what I cooked, how I slept, and how I managed stress. Over months, then years, the symptoms cleared. I have not needed a prescription in six years.</p>
+        <p>This program is everything I learned, structured so you do not have to spend years figuring it out. You get the system. I walk you through it.</p>
+        <p class="font-newsreader text-2xl text-primary font-bold">Kyle, Founder of Clean Kitchen Nutrition</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Stack -->
+  <section class="mb-16 md:mb-32 p-8 md:p-12 glass-card rounded-3xl shadow-xl">
+    <h2 class="font-headline-md text-2xl md:text-headline-md text-primary mb-12 font-bold">What You Get</h2>
+    <div class="space-y-6">
+      <div class="flex justify-between border-b border-stone-200 pb-4">
+        <span class="font-body-lg font-semibold">8 Live Sessions + Recordings</span>
+        <span class="font-label-caps opacity-60 text-xs">$1,200 Value</span>
+      </div>
+      <div class="flex justify-between border-b border-stone-200 pb-4">
+        <span class="font-body-lg font-semibold">Personal Gut Protocol (Capstone)</span>
+        <span class="font-label-caps opacity-60 text-xs">$200 Value</span>
+      </div>
+      <div class="flex justify-between border-b border-stone-200 pb-4">
+        <span class="font-body-lg font-semibold">The Clean Kitchen Playbook</span>
+        <span class="font-label-caps opacity-60 text-xs">$150 Value</span>
+      </div>
+      <div class="flex justify-between border-b border-stone-200 pb-4">
+        <span class="font-body-lg font-semibold">Live Community &amp; Support</span>
+        <span class="font-label-caps opacity-60 text-xs">$200 Value</span>
+      </div>
+      <div class="flex justify-between border-b border-stone-200 pb-4">
+        <span class="font-body-lg font-semibold">Resources Bank + Discount Codes</span>
+        <span class="font-label-caps opacity-60 text-xs">$150 Value</span>
+      </div>
+      <div class="flex justify-between border-b border-stone-200 pb-4">
+        <span class="font-body-lg font-semibold">Quizzes &amp; Assessments</span>
+        <span class="font-label-caps opacity-60 text-xs">$100 Value</span>
+      </div>
+      <div class="pt-8 border-t border-stone-300 space-y-4">
+        <div class="flex justify-between opacity-50">
+          <span class="font-newsreader text-2xl font-bold line-through">Total Program Value</span>
+          <span class="font-newsreader text-2xl font-bold line-through">$2,000</span>
+        </div>
+        <div class="flex justify-between items-center bg-primary text-on-primary rounded-xl px-5 py-4 -mx-2">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-on-primary/70 text-base" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">sell</span>
+            <span class="font-newsreader text-2xl font-bold">Your Price Today</span>
+          </div>
+          <span class="font-newsreader text-3xl font-bold">$499</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-16 md:py-24 glass-card rounded-3xl border-primary/20 shadow-2xl mb-16 md:mb-32 flex flex-col items-center" id="pricing">
+    <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary mb-4 text-center font-bold">Your Investment in the Clean Kitchen Program</h2>
+    <p class="text-on-surface-variant font-body-md mb-12 text-center max-w-lg">One investment. Eight live sessions, every resource, and lifetime community access. The system you build here stays with you.</p>
+    <div class="text-center">
+      <span class="text-6xl md:text-display font-display text-primary font-bold">$499</span>
+      <span class="text-xs font-label-caps opacity-50 block mt-2">USD · ONE TIME PAYMENT</span>
+    </div>
+    <div class="w-full max-w-md mt-12 space-y-4 px-6 md:px-0">
+      <div class="text-center glass-card rounded-2xl px-6 py-4 mb-2 shadow-sm">
+        <p class="font-newsreader text-lg text-primary font-bold">2,000+ people on the waitlist. 50 spots available.</p>
+        <p class="text-xs font-body-md text-on-surface-variant opacity-70 mt-1">Cohort size is capped so every member gets direct access to Kyle on every live call.</p>
+      </div>
+      <a class="shiny-btn w-full block text-center text-on-primary py-5 rounded-lg font-label-caps uppercase tracking-widest" href="#">Secure My Spot</a>
+      <div class="flex items-center justify-center gap-6 opacity-60">
+        <div class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">lock</span> <span class="text-[10px] font-label-caps">Secure Checkout</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mb-16 md:mb-32 max-w-3xl mx-auto" id="faq">
+    <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary mb-4 text-center font-bold">Questions & Answers</h2>
+    <p class="text-center text-on-surface-variant opacity-60 font-body-md mb-12">Everything you need to know before joining.</p>
+    <div class="space-y-3">
+
+      <details class="group glass-card rounded-2xl overflow-hidden shadow-sm">
+        <summary class="flex justify-between items-center cursor-pointer list-none p-6 font-newsreader text-lg font-bold text-primary hover:bg-white/30 transition-colors">
+          Do I need a formal diagnosis to join?
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 flex-shrink-0 ml-4">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 font-body-md text-on-surface-variant leading-relaxed">
+          No diagnosis needed. Most members join because they've been living with bloating, low energy, or digestive discomfort for years without a clear answer from their doctor. If you know something is off, even if nobody has given it a name, this program is built for you. A formal diagnosis like IBS, Crohn's, or SIBO is not a requirement to benefit from understanding how your gut works and what it needs.
+        </p>
+      </details>
+
+      <details class="group glass-card rounded-2xl overflow-hidden shadow-sm">
+        <summary class="flex justify-between items-center cursor-pointer list-none p-6 font-newsreader text-lg font-bold text-primary hover:bg-white/30 transition-colors">
+          How much time does this actually take each week?
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 flex-shrink-0 ml-4">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 font-body-md text-on-surface-variant leading-relaxed">
+          Each live session runs approximately 60–90 minutes. Outside of that, most members spend 10–15 minutes a day applying the protocols, whether that's reading labels at the grocery store, adjusting one meal, or reviewing notes. This isn't a full-time job. It's designed around everyday life, including people with demanding schedules, families, and travel. If you can commit roughly 2 hours per week, you can do this.
+        </p>
+      </details>
+
+      <details class="group glass-card rounded-2xl overflow-hidden shadow-sm">
+        <summary class="flex justify-between items-center cursor-pointer list-none p-6 font-newsreader text-lg font-bold text-primary hover:bg-white/30 transition-colors">
+          What if I can't attend a live session?
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 flex-shrink-0 ml-4">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 font-body-md text-on-surface-variant leading-relaxed">
+          Every session is recorded and made available in the community within 24 hours. You won't fall behind. That said, the live sessions are where questions get answered in the moment, walkthroughs happen on your actual products, and the group energy is something the recordings can't fully replicate. We encourage showing up live when you can, but the recordings ensure you never miss the content.
+        </p>
+      </details>
+
+      <details class="group glass-card rounded-2xl overflow-hidden shadow-sm">
+        <summary class="flex justify-between items-center cursor-pointer list-none p-6 font-newsreader text-lg font-bold text-primary hover:bg-white/30 transition-colors">
+          Do I need to buy expensive supplements or specialty foods?
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 flex-shrink-0 ml-4">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 font-body-md text-on-surface-variant leading-relaxed">
+          No. The foundation of this program is whole food, things you can find at most grocery stores. We do cover supplements in Session 5 and give you a clear tiered framework covering what's foundational, what's situational, and what's a waste of money. Nothing is mandatory. Members who follow the food protocols alone see significant results. Supplements, if you choose to use them, are an addition, not the strategy.
+        </p>
+      </details>
+
+      <details class="group glass-card rounded-2xl overflow-hidden shadow-sm">
+        <summary class="flex justify-between items-center cursor-pointer list-none p-6 font-newsreader text-lg font-bold text-primary hover:bg-white/30 transition-colors">
+          I've tried everything. Why will this be different?
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 flex-shrink-0 ml-4">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 font-body-md text-on-surface-variant leading-relaxed">
+          Fair. You have probably tried Whole30, AIP, low FODMAP, a handful of probiotics, and at least one nutritionist who gave you a list of foods and sent you on your way. Every one of those approaches focuses on symptoms, not the underlying system. Elimination diets tell you what to avoid but not why or for how long. Probiotics help but don't address what's damaging your gut in the first place. This program teaches you how your microbiome works, what breaks it down, and what rebuilds it. When you understand the system, the right changes become obvious. Most members who say they have tried everything have not tried understanding their gut. That is what this is.
+        </p>
+      </details>
+
+      <details class="group glass-card rounded-2xl overflow-hidden shadow-sm">
+        <summary class="flex justify-between items-center cursor-pointer list-none p-6 font-newsreader text-lg font-bold text-primary hover:bg-white/30 transition-colors">
+          Is this safe if I have a serious condition like Crohn's, IBS, or SIBO?
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 flex-shrink-0 ml-4">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 font-body-md text-on-surface-variant leading-relaxed">
+          Kyle himself managed his Crohn's diagnosis through food and lifestyle changes and has been off all medication for six years, so this program was built with serious gut conditions in mind. That said, this is an educational program, not medical advice. If you're under active medical treatment, we recommend keeping your doctor in the loop. Many members with IBS, Crohn's, and SIBO have gone through the program alongside their medical care and found it highly complementary. Use good judgment and consult your physician if you have specific concerns.
+        </p>
+      </details>
+
+      <details class="group glass-card rounded-2xl overflow-hidden shadow-sm">
+        <summary class="flex justify-between items-center cursor-pointer list-none p-6 font-newsreader text-lg font-bold text-primary hover:bg-white/30 transition-colors">
+          Is this suitable for vegetarians or vegans?
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 flex-shrink-0 ml-4">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 font-body-md text-on-surface-variant leading-relaxed">
+          Yes. The program covers principles that apply regardless of your dietary preference. Some of Kyle's top recommended foods for gut support include animal products (bone broth, raw dairy, pasture eggs), but the framework is adaptable. Plant-based members are given alternative approaches throughout. The core of the program, understanding what damages your gut, how to read labels, and how to structure your lifestyle, applies fully to vegetarians and vegans.
+        </p>
+      </details>
+
+      <details class="group glass-card rounded-2xl overflow-hidden shadow-sm">
+        <summary class="flex justify-between items-center cursor-pointer list-none p-6 font-newsreader text-lg font-bold text-primary hover:bg-white/30 transition-colors">
+          How is this different from just watching YouTube or reading a book?
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 flex-shrink-0 ml-4">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 font-body-md text-on-surface-variant leading-relaxed">
+          YouTube gives you information. This gives you a system, accountability, and direct access to Kyle. You can ask questions about your specific situation, your products, your pantry, your symptoms, and get answers live. The community means you're surrounded by people doing the same work, which dramatically increases follow-through. And the capstone session builds your personal gut protocol, a printed one-page document tailored to you. No book or YouTube channel gives you that.
+        </p>
+      </details>
+
+      <details class="group glass-card rounded-2xl overflow-hidden shadow-sm">
+        <summary class="flex justify-between items-center cursor-pointer list-none p-6 font-newsreader text-lg font-bold text-primary hover:bg-white/30 transition-colors">
+          When does the program start and how do I access it?
+          <span class="material-symbols-outlined transition-transform group-open:rotate-180 flex-shrink-0 ml-4">expand_more</span>
+        </summary>
+        <p class="px-6 pb-6 font-body-md text-on-surface-variant leading-relaxed">
+          After joining, you'll receive an email with your access link to our private Circle community within 24 hours. Start dates for the live cohort are communicated there. Sessions run weekly over 4 weeks, with all recordings and resources available immediately in your member portal. Spots are limited per cohort to maintain the quality of live interaction. Once the cohort is full, enrollment closes until the next round.
+        </p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ROI Section -->
+  <section class="mb-16 md:mb-32 p-8 md:p-12 glass-card rounded-3xl shadow-xl">
+    <h2 class="font-headline-md text-2xl md:text-headline-md text-primary mb-4 font-bold">The Cost of Staying in the Dark</h2>
+    <p class="font-body-lg text-on-surface-variant mb-10 leading-relaxed opacity-80">Most people managing gut symptoms without a clear system keep spending. Wrong supplements bought on a recommendation that didn't pan out. Specialist visits that produce a diagnosis with no actionable system. Elimination diets that restrict for weeks and leave you back at square one. That cycle doesn't stop on its own, and it adds up far beyond $499.</p>
+    <div class="space-y-4 mb-10">
+      <div class="flex items-start gap-4 border-b border-stone-200 pb-4">
+        <span class="material-symbols-outlined text-stone-400 flex-shrink-0 mt-0.5">remove_circle</span>
+        <p class="font-body-md text-on-surface-variant opacity-80">Supplements bought without knowing if you need them or why</p>
+      </div>
+      <div class="flex items-start gap-4 border-b border-stone-200 pb-4">
+        <span class="material-symbols-outlined text-stone-400 flex-shrink-0 mt-0.5">remove_circle</span>
+        <p class="font-body-md text-on-surface-variant opacity-80">Specialist visits that hand you a list and send you home</p>
+      </div>
+      <div class="flex items-start gap-4 border-b border-stone-200 pb-4">
+        <span class="material-symbols-outlined text-stone-400 flex-shrink-0 mt-0.5">remove_circle</span>
+        <p class="font-body-md text-on-surface-variant opacity-80">Products bought because the label looked clean, without knowing what to look for</p>
+      </div>
+      <div class="flex items-start gap-4 border-b border-stone-200 pb-4">
+        <span class="material-symbols-outlined text-stone-400 flex-shrink-0 mt-0.5">remove_circle</span>
+        <p class="font-body-md text-on-surface-variant opacity-80">Years of conflicting information and no single place that has all the answers</p>
+      </div>
+    </div>
+    <div class="glass-card rounded-2xl p-6 mb-8 text-center shadow-sm">
+      <p class="font-newsreader text-2xl text-primary font-bold">$499 once. The cycle ends.</p>
+      <p class="font-body-md text-on-surface-variant opacity-70 mt-2">The only program that covers what to avoid, what to eat, and how to live. Taught live, with direct access to Kyle for every question.</p>
+    </div>
+    <a class="shiny-btn w-full block text-center text-on-primary py-5 rounded-lg font-label-caps uppercase tracking-widest" href="#pricing">Enroll Now for $499</a>
+  </section>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="relative z-10 bg-stone-100 border-t border-stone-200">
+  <div class="max-w-7xl mx-auto px-8 pt-12 pb-6">
+    <p class="text-xs text-stone-400 leading-relaxed text-center max-w-4xl mx-auto">
+      Kyle is not a licensed physician, registered dietitian, or certified nutritionist. The Clean Kitchen Program is an educational program only. Nothing on this page or within the program constitutes medical advice. This program is not intended to diagnose, treat, cure, or prevent any disease or medical condition. Individual results vary and are not guaranteed. Always consult a qualified healthcare provider before making changes to your diet, lifestyle, or supplement regimen, particularly if you have a pre-existing medical condition or are under active medical treatment.
+    </p>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between items-center py-10 px-8 max-w-7xl mx-auto gap-8 text-center md:text-left border-t border-stone-200 mt-6">
+    <div class="flex flex-col gap-4">
+      <span class="font-newsreader font-bold text-lg text-stone-900">The Clean Kitchen Program</span>
+      <p class="font-body-md text-sm text-stone-500">© 2024 Clean Kitchen Nutrition. All rights reserved.</p>
+    </div>
+    <div class="flex gap-8">
+      <a class="font-body-md text-sm text-stone-500 hover:text-stone-950 transition-opacity" href="#">Privacy Policy</a>
+      <a class="font-body-md text-sm text-stone-500 hover:text-stone-950 transition-opacity" href="#">Terms of Service</a>
+      <a class="font-body-md text-sm text-stone-500 hover:text-stone-950 transition-opacity" href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* That's Not All: fade-in-up on scroll */
+  .fade-in-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Testimonials: infinite scroll */
+  .testimonials-track {
+    position: relative;
+  }
+  .testimonials-inner {
+    animation: scrollLeft 40s linear infinite;
+    width: max-content;
+  }
+  .testimonials-inner:hover {
+    animation-play-state: paused;
+  }
+  @keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+
+<script>
+  // That's Not All: staggered fade-in
+  const fadeItems = document.querySelectorAll('.fade-in-item');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.dataset.delay || 0;
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  fadeItems.forEach(el => observer.observe(el));
+
+  // Testimonials: duplicate cards for seamless loop
+  const inner = document.getElementById('testimonialScroll');
+  if (inner) {
+    inner.innerHTML += inner.innerHTML;
+  }
+</script>
+</body>
+</html>
