@@ -4,6 +4,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>The Clean Kitchen Program · Restore Your Gut Health</title>
+<!-- PostHog Analytics -->
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="init me ws capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId setPersonProperties".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_C3HqzwkAjNm7hmodkeoRXQErKsKnYqPVBrjW9Ek2XvTL', {
+    api_host: 'https://us.i.posthog.com',
+    person_profiles: 'identified_only',
+  });
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -222,7 +230,7 @@
 
 <!-- Nav -->
 <nav class="sticky top-0 w-full z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/50 shadow-sm">
-  <div class="flex justify-between items-center px-6 md:px-12 h-20 max-w-7xl mx-auto">
+  <div class="flex justify-between items-center px-6 md:px-12 h-14 md:h-16 max-w-7xl mx-auto">
     <span class="font-newsreader font-bold text-base md:text-2xl text-primary leading-tight">
       <span class="md:hidden">Clean Kitchen</span>
       <span class="hidden md:inline">The Clean Kitchen Program</span>
@@ -236,16 +244,31 @@
 
   <!-- Hero -->
   <section class="py-16 md:py-24 lg:py-32 flex flex-col items-center text-center">
-    <span class="inline-flex flex-wrap justify-center items-center gap-x-2.5 gap-y-1 bg-white/70 backdrop-blur-sm border border-primary/30 text-primary font-label-caps uppercase tracking-[0.12em] md:tracking-[0.15em] text-[10px] md:text-xs px-4 py-2 md:px-5 md:py-2.5 rounded-2xl md:rounded-full mb-8 shadow-sm max-w-xs md:max-w-none text-center" style="box-shadow: 0 0 0 3px rgba(45,58,48,0.06), 0 2px 8px rgba(45,58,48,0.1);">
+    <span class="inline-flex justify-center items-center gap-x-2 bg-white/70 backdrop-blur-sm border border-primary/30 text-primary font-label-caps uppercase tracking-[0.08em] md:tracking-[0.15em] text-[9px] md:text-xs px-3 py-1.5 md:px-5 md:py-2.5 rounded-full mb-8 shadow-sm whitespace-nowrap" style="box-shadow: 0 0 0 3px rgba(45,58,48,0.06), 0 2px 8px rgba(45,58,48,0.1);">
       <span class="relative flex h-2 w-2 flex-shrink-0">
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-70" style="background:#C9943A;"></span>
         <span class="relative inline-flex h-2 w-2 rounded-full" style="background:#C9943A;"></span>
       </span>
       For people looking to improve their health through food
     </span>
-    <h1 class="font-display text-4xl md:text-display text-primary max-w-4xl mb-8 font-bold leading-tight">
+    <h1 class="font-display text-4xl md:text-display text-primary max-w-4xl mb-8 md:mb-8 font-bold leading-tight">
       Finally <span class="relative inline-block">eat clean<svg aria-hidden="true" viewBox="0 0 160 12" preserveAspectRatio="none" class="absolute -bottom-1 left-0 w-full" style="height:10px;"><path d="M2,8 C20,2 40,11 60,6 C80,1 100,10 120,5 C135,2 150,8 158,6" stroke="#C9943A" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></span> without the confusion.
     </h1>
+
+    <!-- VSL: shown right after headline on mobile only -->
+    <div class="md:hidden w-full mb-8">
+      <div class="rounded-2xl overflow-hidden aspect-[16/9] shadow-2xl relative" style="background:#000;">
+        <video id="heroVideoMobile" class="w-full h-full object-cover" controls playsinline preload="metadata">
+          <source src="/coaching-video.mp4" type="video/mp4">
+        </video>
+        <div id="heroPlayBtnMobile" class="absolute inset-0 flex items-center justify-center cursor-pointer" style="background: rgba(0,0,0,0.35);">
+          <div class="flex items-center justify-center rounded-full transition-transform duration-150 hover:scale-110 active:scale-95" style="width:72px;height:72px;background:rgba(255,255,255,0.95);box-shadow:0 8px 40px rgba(0,0,0,0.4);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="#2d3a30" style="margin-left:3px;"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
       Get the exact system Kyle follows to eat clean, live healthy, and reduce bloating and inflammation.
     </p>
@@ -257,8 +280,8 @@
     </div>
   </section>
 
-  <!-- Product Preview -->
-  <section class="mb-16 md:mb-32 relative">
+  <!-- Product Preview (desktop only — mobile shows VSL inline above) -->
+  <section class="mb-16 md:mb-32 relative hidden md:block">
     <div class="rounded-2xl overflow-hidden aspect-[16/9] shadow-2xl relative" style="background:#000;">
       <video id="heroVideo" class="w-full h-full object-cover" controls playsinline preload="metadata">
         <source src="/coaching-video.mp4" type="video/mp4">
@@ -272,22 +295,20 @@
     </div>
   </section>
   <script>
-    const heroVideo = document.getElementById('heroVideo');
-    const heroPlayBtn = document.getElementById('heroPlayBtn');
-    heroPlayBtn.addEventListener('click', () => {
-      heroVideo.play();
-      heroPlayBtn.style.display = 'none';
-    });
-    heroVideo.addEventListener('pause', () => {
-      heroPlayBtn.style.display = 'flex';
-    });
-    heroVideo.addEventListener('play', () => {
-      heroPlayBtn.style.display = 'none';
-    });
+    function wireHeroVideo(videoId, btnId) {
+      const v = document.getElementById(videoId);
+      const b = document.getElementById(btnId);
+      if (!v || !b) return;
+      b.addEventListener('click', () => { v.play(); b.style.display = 'none'; });
+      v.addEventListener('pause', () => { b.style.display = 'flex'; });
+      v.addEventListener('play',  () => { b.style.display = 'none'; });
+    }
+    wireHeroVideo('heroVideo', 'heroPlayBtn');
+    wireHeroVideo('heroVideoMobile', 'heroPlayBtnMobile');
   </script>
 
-  <!-- CTA Sprint -->
-  <div class="flex justify-center mb-16 md:mb-32">
+  <!-- CTA Sprint (desktop only — removed on mobile per request) -->
+  <div class="hidden md:flex justify-center mb-16 md:mb-32">
     <a class="shiny-btn font-bold text-on-primary px-6 py-4 md:px-10 md:py-5 rounded-lg text-sm md:text-lg font-label-caps uppercase tracking-widest" href="#pricing">Enroll Now</a>
   </div>
 
@@ -348,7 +369,7 @@
   </section>
 
   <!-- Curriculum -->
-  <section class="mb-16 md:mb-32 max-w-4xl mx-auto px-6 md:px-0">
+  <section class="mb-16 md:mb-32 max-w-4xl mx-auto px-6 md:px-0" id="curriculum">
     <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary text-center mb-4 font-bold">What We Cover</h2>
     <p class="text-center text-on-surface-variant opacity-70 font-body-md mb-12 md:mb-16">8 live sessions. Every one built to move you forward.</p>
     <div class="bg-white/70 backdrop-blur-md rounded-3xl px-4 md:px-12 py-8 md:py-14 border border-primary/8 shadow-sm">
@@ -420,34 +441,37 @@
   </div>
 
   <!-- That's Not All -->
-  <section class="py-16 md:py-24 mb-16 md:mb-32 bg-tertiary-container/30 rounded-3xl">
+  <section class="py-16 md:py-24 mb-16 md:mb-32 bg-tertiary-container/30 rounded-3xl" id="bonuses">
     <div class="max-w-6xl mx-auto px-6 md:px-12">
       <h2 class="font-headline-lg text-3xl md:text-headline-lg text-primary text-center mb-12 md:mb-20 font-bold">Free Bonuses Inside</h2>
       <div class="space-y-12 md:space-y-20">
-        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24 fade-in-item" data-delay="0">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-16 lg:gap-24 fade-in-item" data-delay="0">
+          <h3 class="md:hidden w-full font-headline-md text-2xl text-primary font-bold">Resource Bank</h3>
           <div class="w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-md ring-2 ring-primary/15 ring-offset-2">
             <img alt="Resource Bank" class="w-full h-full object-cover object-top" src="/resource-bank.png"/>
           </div>
           <div class="w-full md:w-1/2">
-            <h3 class="font-headline-md text-2xl md:text-headline-md text-primary mb-6 font-bold">Resource Bank</h3>
+            <h3 class="hidden md:block font-headline-md md:text-headline-md text-primary mb-6 font-bold">Resource Bank</h3>
             <p class="font-body-lg text-body-lg text-on-surface-variant opacity-90 leading-relaxed">Access all of my product recommendations and cheatsheets across different food categories and stores. Never guess what to buy again.</p>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16 lg:gap-24 fade-in-item" data-delay="150">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-16 lg:gap-24 fade-in-item" data-delay="150">
+          <h3 class="md:hidden w-full font-headline-md text-2xl text-primary font-bold">Personalized Audits &amp; Assessments</h3>
           <div class="w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-md ring-2 ring-primary/15 ring-offset-2">
             <img alt="Personalized Audits" class="w-full h-full object-cover object-top" src="/quiz-assessment.png"/>
           </div>
           <div class="w-full md:w-1/2">
-            <h3 class="font-headline-md text-2xl md:text-headline-md text-primary mb-6 font-bold">Personalized Audits &amp; Assessments</h3>
+            <h3 class="hidden md:block font-headline-md md:text-headline-md text-primary mb-6 font-bold">Personalized Audits &amp; Assessments</h3>
             <p class="font-body-lg text-body-lg text-on-surface-variant opacity-90 leading-relaxed">Audit your pantry to understand what to remove and what to buy. We'll work together to establish a baseline that works for your unique environment.</p>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24 fade-in-item" data-delay="300">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-16 lg:gap-24 fade-in-item" data-delay="300">
+          <h3 class="md:hidden w-full font-headline-md text-2xl text-primary font-bold">Exclusive Discounts</h3>
           <div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-md ring-2 ring-primary/15 ring-offset-2" style="background:#7d9982;">
             <img alt="Member Discount Codes" class="w-full h-auto object-contain" src="/discount-codes.png"/>
           </div>
           <div class="w-full md:w-1/2">
-            <h3 class="font-headline-md text-2xl md:text-headline-md text-primary mb-6 font-bold">Exclusive Discounts</h3>
+            <h3 class="hidden md:block font-headline-md md:text-headline-md text-primary mb-6 font-bold">Exclusive Discounts</h3>
             <p class="font-body-lg text-body-lg text-on-surface-variant opacity-90 leading-relaxed">Access hundreds of discount codes for all of my favorite products, exclusive to program members. Save money while upgrading your nutrition.</p>
           </div>
         </div>
@@ -676,27 +700,27 @@
         <h3 class="font-headline-md text-xl md:text-headline-md text-stone-800 mb-8 font-bold">Skip this if...</h3>
         <ul class="space-y-5">
           <li class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <span class="material-symbols-outlined text-red-500 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
             <p class="text-stone-500 text-sm leading-relaxed">You're looking for a 3-day cleanse or a magic supplement that fixes everything overnight.</p>
           </li>
           <li class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <span class="material-symbols-outlined text-red-500 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
             <p class="text-stone-500 text-sm leading-relaxed">You're not willing to look at what you're eating and make meaningful changes, even small ones.</p>
           </li>
           <li class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <span class="material-symbols-outlined text-red-500 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
             <p class="text-stone-500 text-sm leading-relaxed">You want a passive experience. This program requires showing up and doing the work.</p>
           </li>
           <li class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <span class="material-symbols-outlined text-red-500 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
             <p class="text-stone-500 text-sm leading-relaxed">You prefer a rigid meal plan handed to you, instead of understanding your body and building your own system.</p>
           </li>
           <li class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <span class="material-symbols-outlined text-red-500 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
             <p class="text-stone-500 text-sm leading-relaxed">You need urgent medical care. This program is educational and supportive, not a substitute for clinical treatment.</p>
           </li>
           <li class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-stone-400 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
+            <span class="material-symbols-outlined text-red-500 mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">cancel</span>
             <p class="text-stone-500 text-sm leading-relaxed">You expect visible results by week two and are ready to stop if nothing has shifted yet. This is a 4-week system designed for people willing to see it through.</p>
           </li>
         </ul>
@@ -705,7 +729,7 @@
   </section>
 
   <!-- About Kyle -->
-  <section class="mb-16 md:mb-32 flex flex-col md:flex-row items-center gap-8 md:gap-16">
+  <section class="mb-16 md:mb-32 flex flex-col md:flex-row items-center gap-8 md:gap-16" id="about">
     <div class="w-full md:w-1/2 aspect-[4/3] md:aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
       <img alt="Kyle, Creator of The Clean Kitchen Program" class="w-full h-full object-cover"
         src="/kyle-new.jpg"/>
@@ -767,9 +791,9 @@
   </section>
 
   <!-- Pricing -->
-  <section class="py-16 md:py-24 glass-card rounded-3xl border-primary/20 shadow-2xl mb-16 md:mb-32 flex flex-col items-center" id="pricing">
+  <section class="py-16 md:py-24 px-8 md:px-16 glass-card rounded-3xl border-primary/20 shadow-2xl mb-16 md:mb-32 flex flex-col items-center" id="pricing">
     <h2 class="font-headline-lg text-2xl md:text-headline-lg text-primary mb-4 text-center font-bold">Your Investment in<br class="md:hidden"/> the Clean Kitchen Program</h2>
-    <p class="text-on-surface-variant font-body-md mb-12 text-center max-w-lg">One investment. Eight live sessions, every resource, and lifetime community access. The system you build here stays with you.</p>
+    <p class="text-on-surface-variant text-xs md:text-sm mb-12 text-center max-w-md opacity-80">One investment. Eight live sessions, every resource, and lifetime community access. The system you build here stays with you.</p>
     <div class="text-center">
       <span class="text-6xl md:text-display font-display text-primary font-bold">$499</span>
       <span class="text-xs font-label-caps opacity-50 block mt-2">USD · ONE TIME PAYMENT</span>
@@ -779,7 +803,7 @@
         <p class="font-newsreader text-lg text-primary font-bold">2,000+ people on the waitlist. 50 spots available.</p>
         <p class="text-xs font-body-md text-on-surface-variant opacity-70 mt-1">Cohort size is capped so every member gets direct access to Kyle on every live call.</p>
       </div>
-      <a class="shiny-btn w-full block text-center text-on-primary py-5 rounded-lg font-label-caps uppercase tracking-widest" href="#">Secure My Spot</a>
+      <a class="shiny-btn w-full block text-center text-on-primary py-5 rounded-lg font-label-caps uppercase tracking-widest" href="https://ckn.circle.so/checkout/clean-kitchen-program">Secure My Spot</a>
       <div class="flex items-center justify-center gap-6 opacity-60">
         <div class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">lock</span> <span class="text-[10px] font-label-caps">Secure Checkout</span></div>
       </div>
@@ -987,6 +1011,107 @@
   if (inner) {
     inner.innerHTML += inner.innerHTML;
   }
+</script>
+
+<script>
+  // PostHog event tracking
+
+  // CTA clicked: track all enrollment CTA links
+  document.querySelectorAll('a.shiny-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      posthog.capture('cta clicked', {
+        cta_text: btn.textContent.trim(),
+        cta_href: btn.getAttribute('href') || '',
+      });
+    });
+  });
+
+  // Video played: track hero video play events
+  ['heroVideo', 'heroVideoMobile'].forEach(function(videoId) {
+    var video = document.getElementById(videoId);
+    if (video) {
+      video.addEventListener('play', function() {
+        posthog.capture('video played', {
+          video_id: videoId,
+        });
+      });
+    }
+  });
+
+  // Pricing viewed: track when pricing section enters the viewport
+  var pricingSection = document.getElementById('pricing');
+  if (pricingSection) {
+    var pricingObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          posthog.capture('pricing viewed');
+          pricingObserver.unobserve(pricingSection);
+        }
+      });
+    }, { threshold: 0.2 });
+    pricingObserver.observe(pricingSection);
+  }
+
+  // FAQ item expanded: track which question was opened
+  document.querySelectorAll('#faq details').forEach(function(details) {
+    details.addEventListener('toggle', function() {
+      if (details.open) {
+        var summary = details.querySelector('summary');
+        posthog.capture('faq item expanded', {
+          question: summary ? summary.textContent.trim() : '',
+        });
+      }
+    });
+  });
+
+  // Video progress & ended: track 25/50/75/100% milestones on hero videos
+  var videoMilestones = [25, 50, 75, 100];
+  ['heroVideo', 'heroVideoMobile'].forEach(function(videoId) {
+    var video = document.getElementById(videoId);
+    if (!video) return;
+    var fired = {};
+    video.addEventListener('timeupdate', function() {
+      if (!video.duration) return;
+      var pct = Math.floor((video.currentTime / video.duration) * 100);
+      videoMilestones.forEach(function(milestone) {
+        if (pct >= milestone && !fired[milestone]) {
+          fired[milestone] = true;
+          posthog.capture('video progress', {
+            video_id: videoId,
+            percent: milestone,
+          });
+        }
+      });
+    });
+    video.addEventListener('ended', function() {
+      posthog.capture('video ended', {
+        video_id: videoId,
+      });
+    });
+  });
+
+  // Section viewed: testimonials, curriculum, bonuses, about
+  var sectionViewTargets = [
+    { id: 'reviews', event: 'testimonials section viewed' },
+    { id: 'curriculum', event: 'curriculum section viewed' },
+    { id: 'bonuses', event: 'bonuses section viewed' },
+    { id: 'about', event: 'about section viewed' },
+  ];
+  var sectionObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var target = sectionViewTargets.find(function(t) { return t.id === entry.target.id; });
+        if (target) {
+          posthog.capture(target.event);
+          sectionObserver.unobserve(entry.target);
+        }
+      }
+    });
+  }, { threshold: 0.2 });
+  sectionViewTargets.forEach(function(t) {
+    var el = document.getElementById(t.id);
+    if (el) sectionObserver.observe(el);
+  });
 </script>
 </body>
 </html>
