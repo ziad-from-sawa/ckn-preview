@@ -1,2 +1,5 @@
 *.MOV
 *.heic
+.env
+.claude/
+node_modules/
